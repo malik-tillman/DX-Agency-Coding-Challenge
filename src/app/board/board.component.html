@@ -1,0 +1,19 @@
+<div class="copy__container">
+  <h1 class="title">Tillman, Malik - DX Agency Challenge</h1>
+  <h2 class="subtitle">Design a 8*8 board with alternative colors and implement drag and drop of each box on board, in your choice of framework</h2>
+</div>
+
+<div class="container">
+  <div #board class="board__container">
+    <div #box class="box">
+      Drag
+    </div>
+    <div class="row" *ngFor="let row of [].constructor(this.rows); let r = index">
+      <div #column class="column" *ngFor="let column of [].constructor(this.columns); let c = index">
+        <div *ngIf="((c+r) % 2) == 0" class="check-box even"></div>
+        <div *ngIf="((c+r) % 2) == 1" class="check-box odd"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
